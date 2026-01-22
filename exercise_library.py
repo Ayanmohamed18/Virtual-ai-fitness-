@@ -127,7 +127,7 @@ def exercise_library_ui():
                 
                 if gif_url:
                     # Use a container with border for the video
-                    st.image(gif_url, caption="Demonstration", use_container_width=True)
+                    st.image(gif_url, caption="Demonstration", use_column_width=True)
                 else:
                     st.info("No video demonstration available.")
             # ---------------------------
