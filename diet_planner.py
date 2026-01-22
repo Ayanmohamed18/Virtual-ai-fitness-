@@ -1140,6 +1140,16 @@ def main():
                 status_placeholder.info("📊 Calculating your nutrition targets...")
                 st.session_state.diet_plan = generator.generate_diet_plan()
                 
+                # Save to MongoDB if user is logged in
+                if st.session_state.get('authenticated') and st.session_state.get('user'):
+                    try:
+                        from auth_system import FitnessDatabase
+                        db = FitnessDatabase()
+                        if db.save_diet_plan(st.session_state.user['user_id'], st.session_state.diet_plan):
+                            print("Diet plan saved to MongoDB successfully")
+                    except Exception as e:
+                        print(f"Error saving diet plan: {e}")
+                
                 # Track plan creation
                 try:
                     from mixpanel_analytics import analytics

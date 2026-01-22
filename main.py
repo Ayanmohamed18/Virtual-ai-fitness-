@@ -15,12 +15,50 @@ from datetime import datetime, timedelta
 from ui_utils import apply_legendary_styles, render_legendary_header, card_container, render_status_badge
 
 
-# DeepSeek integration flag
+# ... (Existing imports)
+import streamlit as st
+import cv2
+import os
+from dotenv import load_dotenv
+
+# Import WebRtcTrainer
+try:
+    from WebRtcTrainer import webrtc_exercise_ui
+    WEBRTC_AVAILABLE = True
+except ImportError:
+    WEBRTC_AVAILABLE = False
+
+# ... (rest of imports)
+
+# DeepSeek integration flag and UI
+st.sidebar.header("⚙️ Configuration")
+# Allow user to input API Key if not in env
+user_api_key = st.sidebar.text_input("DeepSeek API Key (Optional)", type="password", help="Enter your key if not set in environment")
+DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY") or user_api_key
+
 DEEPSEEK_AVAILABLE = False
-DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
 if DEEPSEEK_API_KEY:
     DEEPSEEK_AVAILABLE = True
-    print("DeepSeek API key detected – advanced reasoning enabled.")
+    # Update environment variable for other modules to see
+    os.environ["DEEPSEEK_API_KEY"] = DEEPSEEK_API_KEY
+    # print("DeepSeek API key detected – advanced reasoning enabled.")
+else:
+     st.sidebar.warning("DeepSeek API Key missing. Advanced AI features disabled.")
+
+# ... (Exercise Import Block remain same) ...
+
+# ... (Main logic updates) ...
+
+# Locate the part where Exercise Trainer is called (usually in a tab or function)
+# Since the file is large, I will target the specific relevant sections if I were editing manually, 
+# but here I am rewriting the file content or specific blocks. 
+# I will assume there is a main function or logic block for the trainer.
+
+# Since I cannot see the full main.py execution flow in the snippet (it ended at line 800), 
+# I will append/modify the relevant UI parts. 
+# WAIT, I see `main.py` has tabs or pages. I need to find where `ExerciseAiTrainer` is used.
+# I'll search for it first to be precise.
+
 
 # Import modules with try-except to handle missing dependencies
 try:
@@ -28,8 +66,10 @@ try:
     from exercise_coach import ExerciseCoach
 
     EXERCISE_AVAILABLE = True
-except ImportError:
+    print(" Exercise modules loaded successfully")
+except Exception as e:
     EXERCISE_AVAILABLE = False
+    
 
 # Import other modules with fallbacks
 try:
@@ -1031,19 +1071,24 @@ def main():
     # Sidebar navigation
     st.sidebar.title("Exercise Options")
 
-    if MEDIAPIPE_AVAILABLE and EXERCISE_AVAILABLE:
-        options = st.sidebar.selectbox(
-            "Select Mode:",
-            (
-                "🎤 Voice Trainer",
-                "📹 Video Analysis",
-                "📷 WebCam Exercise",
-                "🤖 Auto Classify",
-            ),
-        )
-    else:
-        st.sidebar.info("MediaPipe required for exercise features")
-        options = "🎤 Voice Trainer"
+    # Always show the dropdown with all options
+    options = st.sidebar.selectbox(
+        "Select Mode:",
+        (
+            "🤖 Live AI Trainer (Web/Mobile)",
+            "🎤 Voice Trainer",
+            "📹 Video Analysis",
+            "📷 WebCam Exercise (Local Only)",
+        ),
+    )
+    
+    # Show status info
+    if not (MEDIAPIPE_AVAILABLE and EXERCISE_AVAILABLE):
+        st.sidebar.warning(f"⚠️ MediaPipe: {MEDIAPIPE_AVAILABLE} | Exercise: {EXERCISE_AVAILABLE}")
+        if not MEDIAPIPE_AVAILABLE:
+            st.sidebar.info("MediaPipe required for pose detection")
+        if not EXERCISE_AVAILABLE:
+            st.sidebar.info("Exercise modules required for classification")
 
     if options == "📹 Video Analysis" and MEDIAPIPE_AVAILABLE and EXERCISE_AVAILABLE:
         st.markdown("---")
@@ -1100,25 +1145,35 @@ def main():
                 counter, stage = 0, None
                 exer.shoulder_press(cap, is_video=True, counter=counter, stage=stage)
 
-    elif options == "🤖 Auto Classify" and MEDIAPIPE_AVAILABLE and EXERCISE_AVAILABLE:
+    elif options == "🤖 Live AI Trainer (Web/Mobile)" and MEDIAPIPE_AVAILABLE and EXERCISE_AVAILABLE:
         st.markdown("---")
-        st.write("## 🤖 Automatic Exercise Classification and Counting")
-        st.write("AI will automatically detect and classify your exercise type")
-        st.markdown("---")
-        st.write(
-            "Please ensure you are clearly visible and facing the camera directly. This will help the AI accurately track your movements."
-        )
+        st.write("## 🤖 Live AI Trainer")
+        st.write("Automatic exercise detection and counting via camera.")
+        
+        mode = st.radio("Camera Source", ["Browser (Web/Mobile)", "Local Device (Server)"], horizontal=True)
+        
+        if mode == "Browser (Web/Mobile)":
+            if WEBRTC_AVAILABLE:
+                webrtc_exercise_ui()
+            else:
+                st.error("WebRTC module not loaded. Please install dependencies.")
+        else:
+            st.warning("Only works if running locally on the server machine.")
+            st.write(
+                "Please ensure you are clearly visible and facing the camera directly. This will help the AI accurately track your movements."
+            )
 
-        auto_classify_button = st.button("Start Auto Classification")
+            auto_classify_button = st.button("Start Auto Classification")
 
-        if auto_classify_button:
-            time.sleep(2)
-            try:
-                exer = exercise.Exercise()
-                exer.auto_classify_and_count()
-            except Exception as e:
-                st.error(f"Error accessing webcam: {str(e)}")
-                st.info("Please make sure your webcam is connected and accessible.")
+            if auto_classify_button:
+                time.sleep(2)
+                try:
+                    exer = exercise.Exercise()
+                    exer.auto_classify_and_count()
+                except Exception as e:
+                    st.error(f"Error accessing webcam: {str(e)}")
+                    st.info("Please make sure your webcam is connected and accessible.")
+
 
     elif options == "📷 WebCam Exercise" and MEDIAPIPE_AVAILABLE and EXERCISE_AVAILABLE:
         st.markdown("---")

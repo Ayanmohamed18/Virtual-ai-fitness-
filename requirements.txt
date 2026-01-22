@@ -49,3 +49,5 @@ mixpanel==4.10.0
 # Voice Feedback
 elevenlabs==0.2.27
 ultralytics>=8.0.0
+streamlit-webrtc
+

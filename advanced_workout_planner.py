@@ -818,7 +818,21 @@ def advanced_workout_planner_ui():
                 status_placeholder.info("🏧 Designing your weekly structure...")
                 st.session_state.workout_plan = generator.generate_plan()
                 
-                status_placeholder.success("✅ Your personalized plan is ready!")
+                # Save to MongoDB if user is logged in
+                if st.session_state.get('authenticated') and st.session_state.get('user'):
+                    try:
+                        from auth_system import FitnessDatabase
+                        db = FitnessDatabase()
+                        if db.save_workout_plan(st.session_state.user['user_id'], st.session_state.workout_plan):
+                            status_placeholder.success("✅ Your personalized plan is ready and saved!")
+                        else:
+                            status_placeholder.success("✅ Your personalized plan is ready!")
+                    except Exception as e:
+                        print(f"Error saving workout plan: {e}")
+                        status_placeholder.success("✅ Your personalized plan is ready!")
+                else:
+                    status_placeholder.success("✅ Your personalized plan is ready!")
+                
                 time.sleep(1)
                 status_placeholder.empty()
         

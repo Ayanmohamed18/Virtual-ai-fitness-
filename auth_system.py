@@ -105,6 +105,30 @@ class FitnessDatabase:
             st.error(f"Error saving diet plan: {e}")
             return False
     
+    def get_latest_workout_plan(self, user_id: str) -> Optional[Dict]:
+        """Get the most recent workout plan for a user"""
+        try:
+            plan = self.workouts.find_one(
+                {"user_id": user_id, "active": True},
+                sort=[("created_at", -1)]
+            )
+            return plan['plan'] if plan else None
+        except Exception as e:
+            print(f"Error getting workout plan: {e}")
+            return None
+    
+    def get_latest_diet_plan(self, user_id: str) -> Optional[Dict]:
+        """Get the most recent diet plan for a user"""
+        try:
+            plan = self.diet_plans.find_one(
+                {"user_id": user_id, "active": True},
+                sort=[("created_at", -1)]
+            )
+            return plan['plan'] if plan else None
+        except Exception as e:
+            print(f"Error getting diet plan: {e}")
+            return None
+    
     def save_chat_message(self, user_id: str, message: str, response: str, chat_type: str) -> bool:
         try:
             chat_doc = {
@@ -300,6 +324,15 @@ class AuthenticationUI:
                     if user:
                         st.session_state.user = user
                         st.session_state.authenticated = True
+                        
+                        # Load user's saved plans into session state
+                        workout_plan = self.db.get_latest_workout_plan(user['user_id'])
+                        if workout_plan:
+                            st.session_state.workout_plan = workout_plan
+                        
+                        diet_plan = self.db.get_latest_diet_plan(user['user_id'])
+                        if diet_plan:
+                            st.session_state.diet_plan = diet_plan
                         
                         # Track login
                         if ANALYTICS_AVAILABLE:

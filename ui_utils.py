@@ -88,6 +88,15 @@ def apply_legendary_styles():
             margin-bottom: 0 !important;
         }}
 
+        @media (max-width: 768px) {{
+            .main-header {{
+                font-size: 2.5rem !important;
+            }}
+            .sub-header {{
+                font-size: 1rem !important;
+            }}
+        }}
+
         @keyframes glow {{
             from {{ text-shadow: 0 0 10px rgba(0, 242, 96, 0.5); }}
             to {{ text-shadow: 0 0 30px rgba(5, 117, 230, 0.8), 0 0 10px rgba(0, 242, 96, 0.5); }}
