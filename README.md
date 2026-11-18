@@ -40,40 +40,22 @@ Developed by a 4-member team from the Department of Computer Science & Engineeri
 ## 📸 Application Screenshots
 
 ### 1. System Dashboard & Real-Time Module Status
-Displays live status indicators for **MediaPipe**, **Voice AI**, **Exercise AI**, and **DeepSeek R1**, alongside theme controls and exercise mode selection.
-
-![System Dashboard](https://drive.google.com/uc?export=view&id=1sB29AdplGXpuGryAq2aqMW-TJomSlHfM)
-
-### 2. Voice-Guided Exercise Trainer
-Form-first training interface supporting exercise selection (e.g., Squat, Push-Up, Shoulder Press, Bicep Curl), camera feed toggles, rep counter resets, and real-time voice coaching powered by **ElevenLabs**.
-
-> *Tip: Add your Google Drive direct link (`https://drive.google.com/uc?export=view&id=YOUR_FILE_ID`) or local path (`./screenshots/02_voice_trainer_setup.png`) here once uploaded.*
+![System Dashboard](https://lh3.googleusercontent.com/d/1sB29AdplGXpuGryAq2aqMW-TJomSlHfM)
 
 ### 3. Live Computer Vision Pose Tracking & Form Correction
-Real-time 33-point skeletal landmark overlay via **MediaPipe BlazePose** evaluating posture depth, form accuracy (`100%`), repetition count, and instant corrective prompts (*"Perfect depth! Explode up!"*).
-
-![Live Pose Detection](https://drive.google.com/uc?export=view&id=1W5kqNrxiqx3Yf3PFyAhv6CqxUEmzpPXc)
+![Live Pose Detection](https://lh3.googleusercontent.com/d/1W5kqNrxiqx3Yf3PFyAhv6CqxUEmzpPXc)
 
 ### 4. Advanced Diet Planner
-Generates personalized nutrition blueprints, daily caloric targets, and macro-nutrient distributions through a 15-question dietary, lifestyle, and budget assessment.
-
-![Advanced Diet Planner](https://drive.google.com/uc?export=view&id=1ut8YU7oc-two6xKjNALpS0mRhC6RwNhM)
+![Advanced Diet Planner](https://lh3.googleusercontent.com/d/1ut8YU7oc-two6xKjNALpS0mRhC6RwNhM)
 
 ### 5. Mental Health Support Assistant
-Dedicated wellness companion featuring quick-support modules (**Anxiety Help**, **Feeling Down**, **Motivation**, **Sleep Issues**) and empathetic AI chat.
-
-![Mental Health Support Assistant](https://drive.google.com/uc?export=view&id=12tYtzZYfQzBFASTF1Ar3kyrNze_0qLfY)
+![Mental Health Support Assistant](https://lh3.googleusercontent.com/d/12tYtzZYfQzBFASTF1Ar3kyrNze_0qLfY)
 
 ### 6. Smart Workout Planner
-Interactive 15-question onboarding flow that builds tailored 3-to-6-month training regimens aligned with user goals, schedules, available equipment, and fitness levels.
-
-![Smart Workout Planner](https://drive.google.com/uc?export=view&id=1xNwpenk54CTCJ9tjC6UkF0hgIntWpnpz)
+![Smart Workout Planner](https://lh3.googleusercontent.com/d/1xNwpenk54CTCJ9tjC6UkF0hgIntWpnpz)
 
 ### 7. Personal Trainer AI Assistant
-Fine-tuned **DeepSeek R1** conversational fitness coach with voice input and quick-start topics for **Workout Plans**, **Nutrition Guide**, **Muscle Building**, and **Weight Loss**.
-
-![AI Personal Trainer](https://drive.google.com/uc?export=view&id=131ltED79XR6nnjSm5P8v48bkkQcbLj3E)
-
+![AI Personal Trainer](https://lh3.googleusercontent.com/d/131ltED79XR6nnjSm5P8v48bkkQcbLj3E)
 ---
 
 ## 🚀 Why Forever Fit?
