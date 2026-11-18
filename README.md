@@ -43,31 +43,31 @@ Developed by a 4-member team from the Department of Computer Science & Engineeri
 
 ### 1. System Dashboard & Real-Time Module Status
 Displays live status indicators for **MediaPipe**, **Voice AI**, **Exercise AI**, and **DeepSeek R1**, alongside theme controls and exercise mode selection.
-![System Dashboard](screenshots/01_system_dashboard.png)
+![System Dashboard] https://drive.google.com/file/d/1sB29AdplGXpuGryAq2aqMW-TJomSlHfM/view?usp=drive_link
 
 ### 2. Voice-Guided Exercise Trainer
 Form-first training interface supporting exercise selection (e.g., Push Up), camera feed toggles, rep counter resets, and real-time voice coaching powered by **ElevenLabs**.
-![Voice-Guided Exercise Trainer](screenshots/02_voice_trainer_setup.png)
+![Voice-Guided Exercise Trainer] 
 
 ### 3. Live Computer Vision Pose Tracking & Form Correction
 Real-time skeletal landmark overlay via **MediaPipe** evaluating posture depth, form accuracy (`100%`), repetition count, and instant corrective prompts (*"Perfect depth! Explode up!"*).
-![Live Pose Detection](screenshots/03_live_pose_correction.png)
+![Live Pose Detection] https://drive.google.com/file/d/1W5kqNrxiqx3Yf3PFyAhv6CqxUEmzpPXc/view?usp=drive_link
 
 ### 4. Advanced Diet Planner
 Generates personalized nutrition blueprints and macro-nutrient targets through a 15-question dietary, lifestyle, and budget assessment.
-![Advanced Diet Planner](screenshots/04_advanced_diet_planner.png)
+![Advanced Diet Planner] https://drive.google.com/file/d/1ut8YU7oc-two6xKjNALpS0mRhC6RwNhM/view?usp=sharing
 
 ### 5. Mental Health Support Assistant
 Dedicated wellness companion featuring quick-support modules (**Anxiety Help**, **Feeling Down**, **Motivation**, **Sleep Issues**) and empathetic AI chat.
-![Mental Health Support Assistant](screenshots/05_mental_health_assistant.png)
+![Mental Health Support Assistant]https://drive.google.com/file/d/12tYtzZYfQzBFASTF1Ar3kyrNze_0qLfY/view?usp=drive_link
 
 ### 6. Smart Workout Planner
 Interactive 15-question onboarding flow that builds tailored 3-to-6-month training regimens aligned with user goals, schedules, and fitness levels.
-![Smart Workout Planner](screenshots/06_smart_workout_planner.png)
+![Smart Workout Planner] https://drive.google.com/file/d/1xNwpenk54CTCJ9tjC6UkF0hgIntWpnpz/view?usp=drive_link
 
 ### 7. Personal Trainer AI Assistant
 Fine-tuned conversational fitness coach with voice input and quick-start topics for **Workout Plans**, **Nutrition Guide**, **Muscle Building**, and **Weight Loss**.
-![AI Personal Trainer](screenshots/07_ai_assistant.png)
+![AI Personal Trainer] https://drive.google.com/file/d/131ltED79XR6nnjSm5P8v48bkkQcbLj3E/view?usp=drive_link
 
 ---
 
