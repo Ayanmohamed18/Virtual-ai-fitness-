@@ -30,7 +30,7 @@ Developed by a 4-member team from the Department of Computer Science & Engineeri
 | Role | Name | USN | Email ID |
 | :--- | :--- | :--- | :--- |
 | **Team Lead** | **Ayan Mohamed** | `1AH22CD010` | `1AH22CD010@acsce.edu.in` |
-| **Team Member** | **Duggeni Mahesh** | 1AH22CD018` | `1AH22CD018@acsce.edu.in` |
+| **Team Member** | **Duggeni Mahesh** | `1AH22CD018` | `1AH22CD018@acsce.edu.in` |
 | **Team Member** | **Polisetti Aravind Kumar** | `1AH22CD038` | `1AH22CD038@acsce.edu.in` |
 | **Team Member** | **Umesh Reddy C H** | `1AH22CD057` | `1AH22CD057@acsce.edu.in` |
 | **Project Guide** | **Dr. D. Gandhimathi** | `gandhimathid@acsce.edu.in` |
