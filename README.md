@@ -1,4 +1,4 @@
-# 🏋️ Forever Fit: The Future of AI Fitness
+Forever Fit: The Future of AI Fitness
 
 ![Forever Fit Banner](https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop)
 
@@ -19,7 +19,7 @@ This project was formally published and presented at **ACSCON-2026** (Internatio
 - **Paper Title:** *Virtual AI Fitness Coach for Exercise Classification and Form Correction*
 - **Conference:** ACSCON-2026 (Paper ID: 423)
 - **Published Paper (PDF):** [Read Full Research Paper on IJERT (`IJERTCONV14IS060098.pdf`)](https://www.ijert.org/research/IJERTCONV14IS060098.pdf)
-- **Project Report (PDF):** [View Project Report (`docs/Forever_Fit_Project_Report.pdf`)](./docs/Forever_Fit_Project_Report.pdf) *(upload your report PDF to the `docs/` folder in your repository to activate this link)*
+- **Project Report (PDF):** [View Project Report (`docs/Forever_Fit_Project_Report.pdf`)](./docs/Forever_Fit_Project_Report.pdf)
 
 ---
 
@@ -40,22 +40,40 @@ Developed by a 4-member team from the Department of Computer Science & Engineeri
 ## 📸 Application Screenshots
 
 ### 1. System Dashboard & Real-Time Module Status
-![System Dashboard](https://lh3.googleusercontent.com/d/1sB29AdplGXpuGryAq2aqMW-TJomSlHfM)
+Displays live status indicators for **MediaPipe**, **Voice AI**, **Exercise AI**, and **DeepSeek R1**, alongside theme controls and exercise mode selection.
+
+![System Dashboard](./screenshots/01_system_dashboard.png)
+
+### 2. Voice-Guided Exercise Trainer
+Form-first training interface supporting exercise selection (e.g., Squat, Push-Up, Shoulder Press, Bicep Curl), camera feed toggles, rep counter resets, and real-time voice coaching powered by **ElevenLabs**.
+
+![Voice-Guided Exercise Trainer](./screenshots/02_voice_trainer_setup.png)
 
 ### 3. Live Computer Vision Pose Tracking & Form Correction
-![Live Pose Detection](https://lh3.googleusercontent.com/d/1W5kqNrxiqx3Yf3PFyAhv6CqxUEmzpPXc)
+Real-time 33-point skeletal landmark overlay via **MediaPipe BlazePose** evaluating posture depth, form accuracy (`100%`), repetition count, and instant corrective prompts (*"Perfect depth! Explode up!"*).
+
+![Live Pose Detection](./screenshots/03_live_pose_correction.png)
 
 ### 4. Advanced Diet Planner
-![Advanced Diet Planner](https://lh3.googleusercontent.com/d/1ut8YU7oc-two6xKjNALpS0mRhC6RwNhM)
+Generates personalized nutrition blueprints, daily caloric targets, and macro-nutrient distributions through a 15-question dietary, lifestyle, and budget assessment.
+
+![Advanced Diet Planner](./screenshots/04_advanced_diet_planner.png)
 
 ### 5. Mental Health Support Assistant
-![Mental Health Support Assistant](https://lh3.googleusercontent.com/d/12tYtzZYfQzBFASTF1Ar3kyrNze_0qLfY)
+Dedicated wellness companion featuring quick-support modules (**Anxiety Help**, **Feeling Down**, **Motivation**, **Sleep Issues**) and empathetic AI chat.
+
+![Mental Health Support Assistant](./screenshots/05_mental_health_assistant.png)
 
 ### 6. Smart Workout Planner
-![Smart Workout Planner](https://lh3.googleusercontent.com/d/1xNwpenk54CTCJ9tjC6UkF0hgIntWpnpz)
+Interactive 15-question onboarding flow that builds tailored 3-to-6-month training regimens aligned with user goals, schedules, available equipment, and fitness levels.
+
+![Smart Workout Planner](./screenshots/06_smart_workout_planner.png)
 
 ### 7. Personal Trainer AI Assistant
-![AI Personal Trainer](https://lh3.googleusercontent.com/d/131ltED79XR6nnjSm5P8v48bkkQcbLj3E)
+Fine-tuned **DeepSeek R1** conversational fitness coach with voice input and quick-start topics for **Workout Plans**, **Nutrition Guide**, **Muscle Building**, and **Weight Loss**.
+
+![AI Personal Trainer](./screenshots/07_ai_assistant.png)
+
 ---
 
 ## 🚀 Why Forever Fit?
@@ -114,7 +132,7 @@ Powered by **MediaPipe BlazePose**, a 2-layer **BiLSTM** network, and **ElevenLa
    ```bash
    git clone [https://github.com/Ayanmohd18/Forever-fit.git](https://github.com/Ayanmohd18/Forever-fit.git)
    cd Forever-fit
-   Install Dependencies
+Install Dependencies
 
 Bash
 pip install -r requirements.txt
@@ -135,7 +153,13 @@ Forever-fit/
 ├── docs/
 │   └── Forever_Fit_Project_Report.pdf      # Project report PDF
 ├── screenshots/
-│   └── 02_voice_trainer_setup.png          # Optional local backup screenshots
+│   ├── 01_system_dashboard.png
+│   ├── 02_voice_trainer_setup.png
+│   ├── 03_live_pose_correction.png
+│   ├── 04_advanced_diet_planner.png
+│   ├── 05_mental_health_assistant.png
+│   ├── 06_smart_workout_planner.png
+│   └── 07_ai_assistant.png
 ├── main.py
 ├── requirements.txt
 ├── .env
