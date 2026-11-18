@@ -1,4 +1,4 @@
-Forever Fit: The Future of AI Fitness
+# 🏋️ Forever Fit: The Future of AI Fitness
 
 ![Forever Fit Banner](https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop)
 
@@ -42,37 +42,37 @@ Developed by a 4-member team from the Department of Computer Science & Engineeri
 ### 1. System Dashboard & Real-Time Module Status
 Displays live status indicators for **MediaPipe**, **Voice AI**, **Exercise AI**, and **DeepSeek R1**, alongside theme controls and exercise mode selection.
 
-![System Dashboard](./screenshots/01_system_dashboard.png)
+![System Dashboard](./Screenshot%202026-11-18%20192600.png)
 
 ### 2. Voice-Guided Exercise Trainer
 Form-first training interface supporting exercise selection (e.g., Squat, Push-Up, Shoulder Press, Bicep Curl), camera feed toggles, rep counter resets, and real-time voice coaching powered by **ElevenLabs**.
 
-![Voice-Guided Exercise Trainer](./screenshots/02_voice_trainer_setup.png)
+![Voice-Guided Exercise Trainer](./Screenshot%202026-11-18%20192645.png)
 
 ### 3. Live Computer Vision Pose Tracking & Form Correction
 Real-time 33-point skeletal landmark overlay via **MediaPipe BlazePose** evaluating posture depth, form accuracy (`100%`), repetition count, and instant corrective prompts (*"Perfect depth! Explode up!"*).
 
-![Live Pose Detection](./screenshots/03_live_pose_correction.png)
+![Live Pose Detection](./Screenshot%202026-11-18%20192659.png)
 
 ### 4. Advanced Diet Planner
 Generates personalized nutrition blueprints, daily caloric targets, and macro-nutrient distributions through a 15-question dietary, lifestyle, and budget assessment.
 
-![Advanced Diet Planner](./screenshots/04_advanced_diet_planner.png)
+![Advanced Diet Planner](./Screenshot%202026-11-18%20192709.png)
 
 ### 5. Mental Health Support Assistant
 Dedicated wellness companion featuring quick-support modules (**Anxiety Help**, **Feeling Down**, **Motivation**, **Sleep Issues**) and empathetic AI chat.
 
-![Mental Health Support Assistant](./screenshots/05_mental_health_assistant.png)
+![Mental Health Support Assistant](./Screenshot%202026-11-18%20192720.png)
 
 ### 6. Smart Workout Planner
 Interactive 15-question onboarding flow that builds tailored 3-to-6-month training regimens aligned with user goals, schedules, available equipment, and fitness levels.
 
-![Smart Workout Planner](./screenshots/06_smart_workout_planner.png)
+![Smart Workout Planner](./Screenshot%202026-11-18%20192736.png)
 
 ### 7. Personal Trainer AI Assistant
 Fine-tuned **DeepSeek R1** conversational fitness coach with voice input and quick-start topics for **Workout Plans**, **Nutrition Guide**, **Muscle Building**, and **Weight Loss**.
 
-![AI Personal Trainer](./screenshots/07_ai_assistant.png)
+![AI Personal Trainer](./Screenshot%202026-11-18%20192746.png)
 
 ---
 
@@ -130,8 +130,8 @@ Powered by **MediaPipe BlazePose**, a 2-layer **BiLSTM** network, and **ElevenLa
 
 1. **Clone the Repository**
    ```bash
-   git clone [https://github.com/Ayanmohd18/Forever-fit.git](https://github.com/Ayanmohd18/Forever-fit.git)
-   cd Forever-fit
+   git clone [https://github.com/Ayanmohamed18/Virtual-ai-fitness-.git](https://github.com/Ayanmohamed18/Virtual-ai-fitness-.git)
+   cd Virtual-ai-fitness-
 Install Dependencies
 
 Bash
@@ -147,35 +147,3 @@ Run the Application
 
 Bash
 streamlit run main.py
-📂 Repository Structure
-Plaintext
-Forever-fit/
-├── docs/
-│   └── Forever_Fit_Project_Report.pdf      # Project report PDF
-├── screenshots/
-│   ├── 01_system_dashboard.png
-│   ├── 02_voice_trainer_setup.png
-│   ├── 03_live_pose_correction.png
-│   ├── 04_advanced_diet_planner.png
-│   ├── 05_mental_health_assistant.png
-│   ├── 06_smart_workout_planner.png
-│   └── 07_ai_assistant.png
-├── main.py
-├── requirements.txt
-├── .env
-└── README.md
-🤝 Contributing
-Fork the Project
-
-Create your Feature Branch (git checkout -b feature/AmazingFeature)
-
-Commit your Changes (git commit -m 'Add some AmazingFeature')
-
-Push to the Branch (git push origin feature/AmazingFeature)
-
-Open a Pull Request
-
-📄 License
-Distributed under the MIT License. See LICENSE for more information.
-
-Made with ❤️ by Ayan Mohamed & Team | ACS College of Engineering, Bengaluru
